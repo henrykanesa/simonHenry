@@ -51,6 +51,7 @@ class AllTodoView extends GetView<AllTodoController> {
                       controller: controller.searchC,
                       hint: "Cari...",
                       label: "Pencarian",
+                      isDate: true,
                     )),
                     const SizedBox(
                       width: 16,

@@ -101,7 +101,7 @@ class HomeView extends GetView<HomeController> {
                                 ),
                               ),
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   // job
                                   Text(

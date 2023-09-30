@@ -12,13 +12,14 @@ class RegisterView extends GetView<RegisterController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: AppColor.primary,
       appBar: AppBar(
         automaticallyImplyLeading: true,
         elevation: 0.0,
         titleSpacing: 10.0,
         centerTitle: true,
-        title: Text("SIMON PKL"),
+        title: Text(""),
         leading: IconButton(
           icon: SvgPicture.asset(
             'assets/icons/arrow-left.svg',
@@ -29,8 +30,8 @@ class RegisterView extends GetView<RegisterController> {
         backgroundColor: Colors.transparent,
       ),
       extendBodyBehindAppBar: true,
-      body: ListView(
-        shrinkWrap: true,
+      body: Column(
+        // shrinkWrap: true,
         children: [
           Container(
             height: MediaQuery.of(context).size.height * 20 / 100,
@@ -49,7 +50,7 @@ class RegisterView extends GetView<RegisterController> {
               children: [
                 Center(
                   child: Text(
-                    "SiMOn PKL",
+                    "SIMON - PKL",
                     style: TextStyle(
                       fontSize: 24,
                       color: Colors.white,
@@ -70,13 +71,13 @@ class RegisterView extends GetView<RegisterController> {
             ),
           ),
           Container(
-            // height: MediaQuery.of(context).size.height * 70 / 100,
+            height: MediaQuery.of(context).size.height * 80 / 100,
             width: MediaQuery.of(context).size.width,
             color: Colors.white,
-            padding: EdgeInsets.only(left: 20, right: 20, top: 36, bottom: 84),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            padding: EdgeInsets.only(left: 20, right: 20, bottom: 84),
+            child: ListView(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   margin: EdgeInsets.only(bottom: 24),
@@ -174,9 +175,23 @@ class RegisterView extends GetView<RegisterController> {
                   ),
                   child: Obx(
                     () => Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        Text(
+                          "Guru",
+                          style: TextStyle(
+                            color: AppColor.secondarySoft,
+                            fontSize: 14,
+                          ),
+                        ),
                         ListTile(
-                          title: const Text('Guru Kejuruan'),
+                          title: const Text(
+                            'Guru Kejuruan',
+                            style: TextStyle(
+                              color: AppColor.secondarySoft,
+                              fontSize: 14,
+                            ),
+                          ),
                           leading: Radio(
                             value: "Guru Kejuruan",
                             groupValue: controller.radio.value,
@@ -184,7 +199,13 @@ class RegisterView extends GetView<RegisterController> {
                           ),
                         ),
                         ListTile(
-                          title: const Text('Guru Normada'),
+                          title: const Text(
+                            'Guru Normada',
+                            style: TextStyle(
+                              color: AppColor.secondarySoft,
+                              fontSize: 14,
+                            ),
+                          ),
                           leading: Radio(
                             value: "Guru Normada",
                             groupValue: controller.radio.value,
