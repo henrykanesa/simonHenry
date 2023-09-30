@@ -37,8 +37,8 @@ class AllTodoController extends GetxController {
           .collection("users")
           .doc(uid)
           .collection("todos")
-          .where("tanggal", isGreaterThanOrEqualTo: searchC.text)
-          .where("tanggal", isLessThan: "${searchC.text}z")
+          .where("tanggal", isEqualTo: searchC.text)
+          // .where("tanggal", isLessThan: "${searchC.text}z")
           // .orderBy(
           //   "created_at",
           //   descending: true,
@@ -50,7 +50,7 @@ class AllTodoController extends GetxController {
           .doc(uid)
           .collection("todos")
           .orderBy(
-            "created_at",
+            "tanggal",
             descending: true,
           )
           .get();

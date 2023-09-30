@@ -39,7 +39,7 @@ class AddTodoController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    tanggalC.text = DateFormat('d-M-yyyy').format(DateTime.now());
+    tanggalC.text = DateFormat('d-MM-yyyy').format(DateTime.now());
   }
 
   @override

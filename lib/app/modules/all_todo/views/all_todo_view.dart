@@ -49,7 +49,7 @@ class AllTodoView extends GetView<AllTodoController> {
                     Expanded(
                         child: CustomInput(
                       controller: controller.searchC,
-                      hint: "Cari...",
+                      hint: "Cari Tanggal...",
                       label: "Pencarian",
                       isDate: true,
                     )),
