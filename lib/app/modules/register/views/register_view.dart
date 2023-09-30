@@ -52,18 +52,18 @@ class RegisterView extends GetView<RegisterController> {
                   child: Text(
                     "SIMON - PKL",
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 28,
                       color: Colors.white,
                       fontFamily: 'poppins',
-                      height: 150 / 100,
-                      fontWeight: FontWeight.w600,
+                      height: 250 / 100,
+                      fontWeight: FontWeight.w900,
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 5),
                 Center(
                   child: Text(
-                    "Sistem Monitoring Siswa Praktek Lapangan",
+                    "Sistem Monitoring - Praktek Kerja Lapangan",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -85,7 +85,7 @@ class RegisterView extends GetView<RegisterController> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Daftar',
+                        'Register',
                         style: TextStyle(
                           fontSize: 18,
                           fontFamily: 'poppins',
@@ -305,13 +305,13 @@ class RegisterView extends GetView<RegisterController> {
                           ),
                         ),
                       ),
-                      Text(
-                        "Kata sandi minimal 6 karakter",
-                        style: TextStyle(
-                          color: AppColor.secondarySoft,
-                          height: 150 / 100,
-                        ),
-                      ),
+                      // Text(
+                      //   "Kata sandi minimal 6 karakter",
+                      //   style: TextStyle(
+                      //     color: AppColor.secondarySoft,
+                      //     height: 150 / 100,
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),

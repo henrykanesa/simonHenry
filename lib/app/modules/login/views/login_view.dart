@@ -11,19 +11,29 @@ class LoginView extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // resize untuk menghilangkan bottom overflow
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor: AppColor.primary,
+        automaticallyImplyLeading: true,
         elevation: 0.0,
         titleSpacing: 10.0,
         centerTitle: true,
-        title: Text("LOGIN"),
+        title: Text(""),
+        leading: IconButton(
+          icon: SvgPicture.asset(
+            'assets/icons/arrow-left.svg',
+            color: Colors.white,
+          ),
+          onPressed: () => Get.back(),
+        ),
+        backgroundColor: Colors.transparent,
       ),
-      backgroundColor: AppColor.primary,
-      body: ListView(
-        shrinkWrap: true,
+      extendBodyBehindAppBar: true,
+      body: Column(
+        // shrinkWrap: true,
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 25 / 100,
+            height: MediaQuery.of(context).size.height * 20 / 100,
             width: MediaQuery.of(context).size.width,
             padding: EdgeInsets.only(left: 32),
             decoration: BoxDecoration(
@@ -37,20 +47,24 @@ class LoginView extends GetView<LoginController> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "SIMON - PKL",
-                  style: TextStyle(
-                    fontSize: 24,
-                    color: Colors.white,
-                    fontFamily: 'poppins',
-                    height: 150 / 100,
-                    fontWeight: FontWeight.w600,
+                Center(
+                  child: Text(
+                    "SIMON - PKL",
+                    style: TextStyle(
+                      fontSize: 28,
+                      color: Colors.white,
+                      fontFamily: 'poppins',
+                      height: 250 / 100,
+                      fontWeight: FontWeight.w900,
+                    ),
                   ),
                 ),
-                SizedBox(height: 10),
-                Text(
-                  "Sistem Monitoring - Praktek Kerja Lapangan",
-                  style: TextStyle(color: Colors.white),
+                SizedBox(height: 5),
+                Center(
+                  child: Text(
+                    "Sistem Monitoring - Praktek Kerja Lapangan",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ],
             ),
@@ -67,7 +81,7 @@ class LoginView extends GetView<LoginController> {
                 Container(
                   margin: EdgeInsets.only(bottom: 24),
                   child: Text(
-                    'Masuk',
+                    'Login',
                     style: TextStyle(
                       fontSize: 18,
                       fontFamily: 'poppins',
